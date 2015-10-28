@@ -4,6 +4,7 @@ public:
 
 	char* string;
 	int size;
+	
 
 public:
 
@@ -181,4 +182,44 @@ public:
 	{
 		strcpy_s(string, size , "");
 	}
+
+	void Trim()const
+	{
+	
+        //turnright cut
+		bool a;
+		while (a == true)
+		{
+			for (int i = size - 1; i < 0 && a == false; i--)
+			{
+				if (string[i] = ' ')
+				{
+					string[i] = '\0';
+					a = false;
+				}
+				else if (string[i] != ' ')
+				a = true;
+			}
+		}
+	   
+		//turnleft  cut
+		bool a;
+		while (a == true)
+		{
+			for (int z = 0; z < size - 1; z++)
+			{
+				if (string[z] == ' ')
+				{
+					string[z] = '\0';
+
+				}
+				else if (string[z] != ' ')
+				a = false;
+			}
+		}
+	
+	
+	}
+
+
 };
